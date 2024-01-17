@@ -294,45 +294,65 @@ const fecha = movies.find((peliculas, index) => {
 });
 console.log(`La película del año 2010 es ${fecha.title}`);
 
-
 /*6.3 Dado el siguiente javascript, usa .find() para econtrar el alien de nombre 
 'Cucushumushu' y la mutación 'Porompompero'. Una vez que los encuentres, usa 
 spread operator para fusionarlos teniendo en cuenta que el objeto de la mutación 
 lo queremos meter en la propiedad .mutation del objeto fusionado.*/
 
-
 const aliens = [
-	{name: 'Zalamero', planet: 'Eden', age: 4029},
-	{name: 'Paktu', planet: 'Andromeda', age: 32},
-	{name: 'Cucushumushu', planet: 'Marte', age: 503021}
+  { name: "Zalamero", planet: "Eden", age: 4029 },
+  { name: "Paktu", planet: "Andromeda", age: 32 },
+  { name: "Cucushumushu", planet: "Marte", age: 503021 },
 ];
 const mutations = [
-	{name: 'Porompompero', description: 'Hace que el alien pueda adquirir la habilidad de tocar el tambor'},
-	{name: 'Fly me to the moon', description: 'Permite volar, solo y exclusivamente a la luna'},
-	{name: 'Andando que es gerundio', description: 'Invoca a un señor mayor como Personal Trainer'}
+  {
+    name: "Porompompero",
+    description:
+      "Hace que el alien pueda adquirir la habilidad de tocar el tambor",
+  },
+  {
+    name: "Fly me to the moon",
+    description: "Permite volar, solo y exclusivamente a la luna",
+  },
+  {
+    name: "Andando que es gerundio",
+    description: "Invoca a un señor mayor como Personal Trainer",
+  },
 ];
 
 const bichos = aliens.find((alienigenas, index) => {
-
-return alienigenas.name === 'Cucushumushu'
-
-
+  return alienigenas.name === "Cucushumushu";
 });
 
 //console.log("🚀 ~ bichos ~ bichos:", bichos.name) -------------------- OK
 
-const cualidades = mutations.find((mutaciones, index) =>{
-return mutaciones.name === 'Porompompero'
-
-
+const cualidades = mutations.find((mutaciones, index) => {
+  return mutaciones.name === "Porompompero";
 });
 //console.log("🚀 ~ cualidades ~ cualidades:", cualidades) ---------------- OK
 
-const monstruo = {...bichos, mutation: cualidades};
+const monstruo = { ...bichos, mutation: cualidades };
 
-console.log("🚀 ~ monstruo:", monstruo)
+console.log("🚀 ~ monstruo:", monstruo);
 
+//! iteración 7
 
+/*7.1 Dado el siguiente array, haz una suma de todos las notas de los examenes de 
+los alumnos usando la función .reduce().*/
 
+const exams = [
+  { name: "Yuyu Cabeza Crack", score: 5 },
+  { name: "Maria Aranda Jimenez", score: 1 },
+  { name: "Cristóbal Martínez Lorenzo", score: 6 },
+  { name: "Mercedez Regrera Brito", score: 7 },
+  { name: "Pamela Anderson", score: 3 },
+  { name: "Enrique Perez Lijó", score: 6 },
+  { name: "Pedro Benitez Pacheco", score: 8 },
+  { name: "Ayumi Hamasaki", score: 4 },
+  { name: "Robert Kiyosaki", score: 2 },
+  { name: "Keanu Reeves", score: 10 },
+];
 
+const notas = exams.reduce((acc, alumnos) => acc + alumnos.score, 0);
 
+console.log(`La suma de las notas de los alumnos es ${notas}`);
