@@ -275,7 +275,6 @@ el caracter 'Legends' en su propiedad .gameMorePlayed. Recomendamos usar la func
 Además, pon el valor de la propiedad .gameMorePlayed a MAYUSCULAS cuando 
 .age sea mayor que 35.*/
 
-//! --------------------------------------------
 const streamers2 = [
 	{name: 'Rubius', age: 32, gameMorePlayed: 'Minecraft'},
 	{name: 'Ibai', age: 25, gameMorePlayed: 'League of Legends'},
@@ -302,6 +301,25 @@ const mayor = [];
  : null;
 	
 });
+
+//! -----------------------5.5 Y 5.6  PENDIENTES POR HTML---------------------------------
+
+
+//! Iteracion 6
+
+//6.1 Dado el siguiente array, usa .find() para econtrar el número 100.
+
+
+const numbers = [32, 21, 63, 95, 100, 67, 43];
+
+const encontrar = numbers.find((numero, index) => {
+
+return numero === 100;
+
+}
+
+);
+console.log(`El nº ${encontrar} ha sido encontrado`)
 
 
 
