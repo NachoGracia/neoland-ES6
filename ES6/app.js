@@ -267,8 +267,30 @@ jugadores2.forEach((jugadores, index) => {
       console.log(`El jugador ${mayor} tiene más de 35 años`)
     : null;
 });
+//! ------------------------------------------------------5.6 y 5.7 FALTAN
 
-//! -----------------------5.5 Y 5.6  PENDIENTES POR HTML---------------------------------
+/*5.6 Dado el siguiente html y javascript, utiliza .filter() para mostrar por consola 
+los streamers que incluyan la palabra introducida en el input. De esta forma, si 
+introduzco 'Ru' me deberia de mostrar solo el streamer 'Rubius'. Si
+introduzco 'i', me deberia de mostrar el streamer 'Rubius' e 'Ibai'.
+
+const streamers3 = [
+  { name: "Rubius", age: 32, gameMorePlayed: "Minecraft" },
+  { name: "Ibai", age: 25, gameMorePlayed: "League of Legends" },
+  { name: "Reven", age: 43, gameMorePlayed: "League of Legends" },
+  { name: "AuronPlay", age: 33, gameMorePlayed: "Among Us" },
+];
+
+const toFilterStreamers = streamers3.filter((jugadores, index) =>
+  jugadores.name.includes()
+);
+console.log("🚀 ~ toFilterStreamers:", toFilterStreamers);
+
+const imput = document.querySelector("[data-function=toFilterStreamers]");
+imput.addEventListener("input", (event) => {
+  console.log("🚀 ~ imput.addEventListener ~ event:", event.target.value);
+});
+console.log("🚀 ~ imput:", imput);*/
 
 //! Iteracion 6
 
@@ -357,13 +379,17 @@ const notas = exams.reduce((acc, alumnos) => acc + alumnos.score, 0);
 
 console.log(`La suma de las notas de los alumnos es ${notas}`);
 
-//! 7.2-----------------------ME FALTA
 /*7.2 Dado el mismo array, haz una suma de todos las notas de los examenes de los 
 alumnos que esten aprobados usando la función .reduce().*/
 
-/*const sumaAprovados = if (alumnos.score >= 5) {
-  exams.reduce((acc, alumnos) => acc + alumnos.score, 0) && console.log(``);
-}*/
+const sumaAprovados = exams.reduce((acc, alumnos) => {
+  if (alumnos.score >= 5) {
+    acc + alumnos.score, 0;
+  }
+  return acc;
+}, 0);
+
+console.log("🚀 ~ sumaAprovados ~ sumaAprovados:", sumaAprovados);
 
 //7.3 Dado el mismo array, haz la media de las notas de todos los examenes .reduce().
 
@@ -393,7 +419,7 @@ const videogames = [
 const generos = videogames.filter((juegos, index) =>
   juegos.genders.includes("RPG")
 );
-console.log("🚀 ~ generos:", generos); //!--------EJERCICIO OK; PERO AQUI QUIERO SACAR EL NOMBRE POR CONSOLA
+console.log("🚀 ~ generos:", generos); //!--------EJERCICIO OK; PERO AQUI ME GUSTARÍA SACAR EL NOMBRE POR CONSOLA
 
 const scores = [];
 
