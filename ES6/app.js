@@ -252,21 +252,22 @@ const streamers2 = [
 ];
 
 const jugadores2 = streamers2.filter((youtubers, index) =>
-  youtubers.gameMorePlayed.includes("Legend")
+  youtubers.gameMorePlayed.includes("Legends")
 );
 
-console.log("🚀 ~ jugadores2:", jugadores2);
+//console.log("🚀 ~ jugadores2:", jugadores2);
 
 //ahora recorrer con forEach
 
-jugadores2.forEach((jugadores, index) => {
-  const mayor = [];
-
-  jugadores.age > 35
-    ? mayor.push(jugadores.name) &&
-      console.log(`El jugador ${mayor} tiene más de 35 años`)
-    : null;
+const masJugon = jugadores2.map((jugadores, index) => {
+  if (jugadores.age > 35) {
+    jugadores.gameMorePlayed = jugadores.gameMorePlayed.toUpperCase();
+  }
+  return jugadores;
 });
+
+console.log("🚀 ~ masJugon ~ masJugon:", masJugon);
+
 //! ------------------------------------------------------5.6 y 5.7 FALTAN
 
 /*5.6 Dado el siguiente html y javascript, utiliza .filter() para mostrar por consola 
