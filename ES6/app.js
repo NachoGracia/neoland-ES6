@@ -420,7 +420,13 @@ const videogames = [
 const generos = videogames.filter((juegos, index) =>
   juegos.genders.includes("RPG")
 );
-console.log("🚀 ~ generos:", generos); //!--------EJERCICIO OK; PERO AQUI ME GUSTARÍA SACAR EL NOMBRE POR CONSOLA
+console.log("🚀 ~ generos:", generos);
+
+// para sacar los nombres
+
+for (let juegos in generos) {
+  console.log(`Este juego es RPG:    ${generos[juegos].name} `);
+}
 
 const scores = [];
 
