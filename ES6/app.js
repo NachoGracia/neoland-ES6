@@ -257,8 +257,6 @@ const jugadores2 = streamers2.filter((youtubers, index) =>
 
 //console.log("🚀 ~ jugadores2:", jugadores2);
 
-//ahora recorrer con forEach
-
 const masJugon = jugadores2.map((jugadores, index) => {
   if (jugadores.age > 35) {
     jugadores.gameMorePlayed = jugadores.gameMorePlayed.toUpperCase();
@@ -435,7 +433,9 @@ const notasScores = generos.forEach((juegos, index) => {
 });
 console.log("🚀 ~ scores:", scores); // ok, me saca la puntuacion a Scores.
 
-const medias = scores.reduce((acc, puntuacion) => acc + puntuacion, 0) / 2;
+const medias =
+  scores.reduce((acc, puntuacion) => acc + puntuacion, 0) / scores.length;
+console.log("🚀 ~ medias:", medias);
 
 console.log(
   `La nota media de los juegos de RPG es de : ${medias} puntos sobre 10`
